@@ -1,4 +1,4 @@
-module github.com/lukemoran01/htmlparse
+module github.com/lukemoran01/htmlparser
 
 go 1.20
 

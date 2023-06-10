@@ -1,6 +1,7 @@
 package htmlparse
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -66,6 +67,7 @@ func Dfs(node *html.Node) []Link {
 	nodeStack.Push(node)
 	for !nodeStack.IsEmpty() {
 		currentNode := nodeStack.Pop()
+		fmt.Println(currentNode.Data)
 		// NON-DFS Actions
 		if currentNode.FirstChild != nil && currentNode.Data == "a" {
 			links = append(links, actOnNode(currentNode))
